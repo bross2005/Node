@@ -27,6 +27,13 @@ app.use((req, res, next) => {
 
 app.use(express.static(__dirname + '/public'));
 
+app.get('/projects', (req,res) => {
+    res.render('home.hbs', {
+        bodyShit: 'new body',
+        otherShit: 'otherShit'
+    });
+})
+
 app.get('/', (req, res) => {
     res.render('home.hbs', {
         pageTitle: 'home Page',
