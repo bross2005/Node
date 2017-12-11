@@ -15,11 +15,13 @@
   },
   "devDependencies": {
     "expect": "^1.20.2",
-    "mocha": "^3.5.0"
+    "mocha": "^3.5.0",
+    "nodemon": "^1.12.5",
+    "supertest": "^3.0.0"
   },
   "scripts": {
     "test": "mocha **/*.quantidex.js",
-    "start": "node server.js"
+    "test-watch": "nodemon --exec npm test"
   },
   "author": "",
   "license": "ISC",
